@@ -1,24 +1,14 @@
-One page that displays all students
-Page that displays single students
+# Student Roster
 
-## Student Class //Model
-	- id *
-	- name *
-	- github repo link * //TODO: change to just username
-	- favorite food *
+Example live coded 10-3-2018
 
-## Controller //Controller
-	- routes for
-		- /students*
-		- /student
+## Installation
 
-## Repository //Model *
-
-## Views //Views
-	- students *
-		- Max *
-		- Kelli *
-		- Thomas *
-	- students.html*
-	- navigation menu *
-
+- Fork to your own GitHub account
+- Clone to `wcci/code`
+- `cd wcci/code/student-roster`
+- `gradle eclipse`
+- Import to Eclipse
+- Right-click `StudentRosterApplication.java`
+- Click `Run As > Java Application`
+- Open a browser window to `localhost:8080/students`
