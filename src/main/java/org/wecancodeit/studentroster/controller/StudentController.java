@@ -1,3 +1,14 @@
+/*
+ * Directs Traffic
+ * 
+ * When requests come in from the server,
+ * Controllers are the first thing they hit.
+ * 
+ * Controllers then process the routes (e.g '/students/1')
+ * and respond to the browser (client) with a corresponding
+ * action
+ * 
+ */
 package org.wecancodeit.studentroster.controller;
 
 import java.util.HashMap;
@@ -14,8 +25,24 @@ public class StudentController {
 	
 	private StudentRepository studentRepo = new StudentRepository();
 
+	// Request
 	@GetMapping("/students")
 	public String getStudents(Model model) {
+		/*
+		 * Response
+		 * 
+		 * Anything being added to the model is
+		 * building the model
+		 * 
+		 * Once the model is built, it is sent
+		 * to the specified view, in this case 'students',
+		 * which is then populated by the information
+		 * in the model
+		 * 
+		 * The resulting generated HTML page is then
+		 * sent back to the client.
+		 * 
+		 */
 		model.addAttribute("students", studentRepo.findAll());
 		return "students";
 	}

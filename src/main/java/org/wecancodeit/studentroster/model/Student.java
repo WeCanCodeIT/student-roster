@@ -1,3 +1,10 @@
+/*
+ * Just a Plain Old Java Object (POJO)
+ * 
+ * This acts the same way as the POJOs we're used to.
+ * It just acts as a template for your data.
+ * 
+ */
 package org.wecancodeit.studentroster.model;
 
 public class Student {

@@ -1,11 +1,23 @@
+/*
+ * Repositories are also part of the Model as they help
+ * build and structure the data we're using.
+ * 
+ * We will be using these in conjunction with
+ * databases in the future (which also fit into the
+ * Model section)
+ * 
+ */
+
 package org.wecancodeit.studentroster.repositories;
 
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.stereotype.Repository;
 import org.wecancodeit.studentroster.model.Student;
 
+@Repository
 public class StudentRepository {
 	
 	private Map<Long, Student> students = new HashMap<>();

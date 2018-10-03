@@ -1,4 +1,14 @@
-<!DOCTYPE html>
+<!-- 
+	All templates represent the View layer.
+	
+	These are the pieces that build the things
+	that get rendered in the browser.
+	
+	This is what your user will see/interact with.
+	
+	!DON'T FORGET SEMANTIC MARKUP!
+ -->
+ <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 	<title th:text="${student.name}">Student</title>
@@ -15,6 +25,10 @@
 	</header>
 	<main>
 		<h3 th:text="${student.favoriteFood}">Favorite Food</h3><!-- favorite food -->
+		<!--
+			This is (imo) the best way to concatenate
+			in Thymeleaf
+		-->
 		<a th:href="|https://github.com/${student.githubUsername}|">GitHub</a><!-- GitHub Link -->
 	</main>
 	<footer>

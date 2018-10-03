@@ -1,4 +1,15 @@
+<!-- 
+	All templates represent the View layer.
+	
+	These are the pieces that build the things
+	that get rendered in the browser.
+	
+	This is what your user will see/interact with.
+	
+	!DON'T FORGET SEMANTIC MARKUP!
+ -->
 <!DOCTYPE html>
+<!-- !YOU NEED THIS FOR THYMELEAF TO WORK! -->
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 	<title>Students</title>
@@ -9,6 +20,11 @@
 		<nav>
 			<ul>
 				<li><a href="/students">Some Students</a></li>
+				<!--
+					Remember you need 'th:' prefacing any
+					attribute that Thymeleaf is interacting
+					with
+				-->
 				<li th:each="student : ${students}"><a th:href="|/students/${student.id}|" th:text="${student.name}">Student</a></li>
 			</ul>
 		</nav>
