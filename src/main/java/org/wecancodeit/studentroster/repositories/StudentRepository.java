@@ -1,5 +1,6 @@
 package org.wecancodeit.studentroster.repositories;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -17,8 +18,16 @@ public class StudentRepository {
 		return students.size();
 	}
 
-	public void add(Student max) {
-		students.put(max.getId(), max);
+	public void add(Student student) {
+		students.put(student.getId(), student);
+	}
+
+	public Student findOne(Long i) {
+		return students.get(i);
+	}
+
+	public Collection<Student> findAll() {
+		return students.values();
 	}
 	
 	

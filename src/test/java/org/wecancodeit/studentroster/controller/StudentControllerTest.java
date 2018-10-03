@@ -37,4 +37,24 @@ public class StudentControllerTest {
     	// Assert
     	.andExpect(view().name("students"));
     }
+ 
+    @Test
+    public void shouldBeOkWhenAccessingStudent() throws Exception { 
+        // Arrange - Grab mockMvc
+    	mockMvc
+    	// Act - Perform the Mock request to localhost:8080/students
+        .perform(get("/student"))
+        // Assert - Assert that we got back a 2xx HTTP status	
+        .andExpect(status().isOk());
+    }
+    
+    @Test
+    public void shouldReturnStudentTemplateWhenAccessingStudent() throws Exception {
+    	// Arrange
+    	mockMvc
+    	// Act
+    	.perform(get("/student"))
+    	// Assert
+    	.andExpect(view().name("student"));
+    }
 }

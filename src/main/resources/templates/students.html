@@ -1,25 +1,21 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-	<title th:text="${title}"></title>
+	<title>Students</title>
 </head>
 <body>
 	<header>
-		<h1 th:text="${title}"></h1>
+		<h1>Students</h1>
 		<nav>
 			<ul>
-				<li><a href="/students.html">Some Students</a></li>
-				<li><a href="/max.html">Max</a></li>
-				<li><a href="/kelli.html">Kelli</a></li>
-				<li><a href="/thomas.html">Thomas</a></li>
+				<li><a href="/students">Some Students</a></li>
+				<li th:each="student : ${students}"><a href="" th:text="${student.name}">Student</a></li>
 			</ul>
 		</nav>
 	</header>
 	<main>
 		<ul>
-			<li><a href="/max.html">Max</a></li>
-			<li><a href="/kelli.html">Kelli</a></li>
-			<li><a href="/thomas.html">Thomas</a></li>
+			<li th:each="student : ${students}"><a href="" th:text="${student.name}">Student</a></li>
 		</ul>
 	</main>
 	<footer>

@@ -2,17 +2,17 @@ One page that displays all students
 Page that displays single students
 
 ## Student Class //Model
-	- id
-	- name
-	- github repo link
-	- favorite food
+	- id *
+	- name *
+	- github repo link * //TODO: change to just username
+	- favorite food *
 
 ## Controller //Controller
 	- routes for
-		- /students
+		- /students*
 		- /student
 
-## Repository //Model
+## Repository //Model *
 
 ## Views //Views
 	- students *
