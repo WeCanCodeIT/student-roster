@@ -4,13 +4,13 @@ public class Student {
 	
 	private Long id;
 	private String name;
-	private String github;
+	private String githubUsername;
 	private String favoriteFood;
 
-	public Student(Long id, String name, String github, String favoriteFood) {
+	public Student(Long id, String name, String githubUsername, String favoriteFood) {
 		this.id = id;
 		this.name = name;
-		this.github = github;
+		this.githubUsername = githubUsername;
 		this.favoriteFood = favoriteFood;
 	}
 
@@ -22,8 +22,8 @@ public class Student {
 		return name;
 	}
 
-	public String getGithub() {
-		return github;
+	public String getGithubUsername() {
+		return githubUsername;
 	}
 
 	public String getFavoriteFood() {

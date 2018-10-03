@@ -1,24 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-	<title>Thomas Lenhart</title>
+	<title th:text="${student.name}">Student</title>
 	<!-- Do something useful with a students id -->
 </head>
 <body>
 	<header>
-		<h1>Thomas Lenhart</h1><!-- Name -->
+		<h1 th:text="${student.name}">Student</h1><!-- Name -->
 		<nav>
 			<ul>
-				<li><a href="/students.html">Some Students</a></li>
-				<li><a href="/max.html">Max</a></li>
-				<li><a href="/kelli.html">Kelli</a></li>
-				<li><a href="/thomas.html">Thomas</a></li>
+				<li><a href="/students">Students</a></li>
 			</ul>
 		</nav>
 	</header>
 	<main>
-		<h3>Kool-aid</h3><!-- favorite food -->
-		<a href="https://github.com/ttrain1">GitHub</a><!-- GitHub Link -->
+		<h3 th:text="${student.favoriteFood}">Favorite Food</h3><!-- favorite food -->
+		<a th:href="|https://github.com/${student.githubUsername}|">GitHub</a><!-- GitHub Link -->
 	</main>
 	<footer>
 		<small>&copy; WCCI 2018</small>

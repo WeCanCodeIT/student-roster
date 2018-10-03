@@ -43,7 +43,7 @@ public class StudentControllerTest {
         // Arrange - Grab mockMvc
     	mockMvc
     	// Act - Perform the Mock request to localhost:8080/students
-        .perform(get("/student"))
+        .perform(get("/students/1"))
         // Assert - Assert that we got back a 2xx HTTP status	
         .andExpect(status().isOk());
     }
@@ -53,7 +53,7 @@ public class StudentControllerTest {
     	// Arrange
     	mockMvc
     	// Act
-    	.perform(get("/student"))
+    	.perform(get("/students/1"))
     	// Assert
     	.andExpect(view().name("student"));
     }

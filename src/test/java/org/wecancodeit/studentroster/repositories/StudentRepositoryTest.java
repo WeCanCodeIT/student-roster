@@ -1,24 +1,23 @@
 package org.wecancodeit.studentroster.repositories;
 
-import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.hasItems;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
 import java.util.Collection;
-import java.util.HashMap;
 
 import org.junit.Test;
 import org.wecancodeit.studentroster.model.Student;
 
 public class StudentRepositoryTest {
 
-	private StudentRepository studentRepo = new StudentRepository(new HashMap<>());
+	private StudentRepository studentRepo = new StudentRepository();
 	
 	@Test
 	public void shouldAcceptStudents() {
 		//Arrange
-		Student max = new Student(1L, "Max", "https://github.com/maxmraz", "Cinammon");
+		Student max = new Student(5L, "Justin", "justinthuffman", "Beef Tenderloin wrapped in Bacon");
 		//Act
 		int repoSizeBeforeAdding = studentRepo.size();
 		studentRepo.add(max);
@@ -39,14 +38,14 @@ public class StudentRepositoryTest {
 	
 	@Test
 	public void findAllShouldReturnAllStudents() {
-		Student max = new Student(1L, "Max", "https://github.com/maxmraz", "Cinammon");
-		Student kelli = new Student(2L, "Kelli", "https://github.com/kellimk", "Oatmeal");
+		Student ingrid = new Student(6L, "Ingrid", "biederman14", "Crepes");
+		Student riley = new Student(7L, "Riley", "rileyjeano", "Cupcakes");
 		
-		studentRepo.add(max);
-		studentRepo.add(kelli);
+		studentRepo.add(ingrid);
+		studentRepo.add(riley);
 		
 		Collection<Student> result = studentRepo.findAll();
 		
-		assertThat(result, containsInAnyOrder(max, kelli));
+		assertThat(result, hasItems(ingrid, riley));
 	}
 }
