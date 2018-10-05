@@ -7,12 +7,15 @@ import static org.junit.Assert.assertThat;
 
 import java.util.Collection;
 
+import javax.annotation.Resource;
+
 import org.junit.Test;
 import org.wecancodeit.studentroster.model.Student;
 
 public class StudentRepositoryTest {
 
-	private StudentRepository studentRepo = new StudentRepository();
+	@Resource
+	private StudentRepository studentRepo;
 	
 	@Test
 	public void shouldAcceptStudents() {

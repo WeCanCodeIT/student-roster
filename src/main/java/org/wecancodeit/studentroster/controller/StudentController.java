@@ -11,19 +11,19 @@
  */
 package org.wecancodeit.studentroster.controller;
 
-import java.util.HashMap;
+import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.wecancodeit.studentroster.model.Student;
 import org.wecancodeit.studentroster.repositories.StudentRepository;
 
 @Controller
 public class StudentController {
 	
-	private StudentRepository studentRepo = new StudentRepository();
+	@Resource
+	private StudentRepository studentRepo;
 
 	// Request
 	@GetMapping("/students")
